@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.9.6 on darwin)" generated="2024-04-06T19:57:03.211101" rpa="false" schemaversion="5">
+<suite id="s1" name="myTestCase" source="/Users/shyam.sunder/Documents/Projects/test_robot/myproject/myapp/test_cases/myTestCase.robot">
+<test id="s1-t1" name="Check forget password functionality for OrangeHRM website" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-06T19:57:03.314901" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-06T19:57:03.314751" elapsed="3.596278"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-06T19:57:06.911715" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-06T19:57:06.911464" elapsed="89.526581"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:h5.oxd-text.oxd-text--h5.orangehrm-login-title</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-06T19:58:36.438227" elapsed="1.085852"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-06T19:58:37.524552" level="INFO">Clicking element 'class=orangehrm-login-forgot-header'.</msg>
+<arg>class=orangehrm-login-forgot-header</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-06T19:58:37.524287" elapsed="2.488198"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:h6.oxd-text.oxd-text--h6.orangehrm-forgot-password-title</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-06T19:58:40.012709" elapsed="1.713825"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-06T19:58:41.734413" level="INFO">Current page contains text 'Reset Password'.</msg>
+<arg>Reset Password</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-06T19:58:41.726728" elapsed="0.007765"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-06T19:58:41.734859" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<arg>name=username</arg>
+<arg>Admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-06T19:58:41.734648" elapsed="0.108305"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-06T19:58:41.843386" level="INFO">Clicking button 'Reset Password'.</msg>
+<msg time="2024-04-06T19:58:41.974461" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-06T19:58:41.974590" level="FAIL">Button with locator 'Reset Password' not found.</msg>
+<arg>Reset Password</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-06T19:58:41.843147" elapsed="0.137409">Button with locator 'Reset Password' not found.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Reset Password link sent successfully</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-04-06T19:58:41.980734" elapsed="0.000043"/>
+</kw>
+<status status="FAIL" start="2024-04-06T19:57:03.314084" elapsed="98.666812">Button with locator 'Reset Password' not found.</status>
+</test>
+<status status="FAIL" start="2024-04-06T19:57:03.214708" elapsed="98.766634"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="myTestCase">myTestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

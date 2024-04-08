@@ -1,0 +1,19 @@
+==============================================================================
+myTestCase                                                                    
+==============================================================================
+Check forget password functionality for OrangeHRM website               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/shyam.sunder/Documents/Projects/test_robot/myproject/myapp/test_cases/myTestCase.robot:7
+    T:  Check forget password functionality for OrangeHRM website    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  /Users/shyam.sunder/Documents/Projects/test_robot/myproject/myapp/test_cases/myTestCase.robot:15
+      Click Button    Reset Password
+______________________________________________________________________________
+| FAIL |
+Button with locator 'Reset Password' not found.
+------------------------------------------------------------------------------
+myTestCase                                                            | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  /Users/shyam.sunder/Documents/Projects/test_robot/myproject/myapp/output/pabot_results/0/output.xml
