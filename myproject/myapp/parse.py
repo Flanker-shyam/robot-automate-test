@@ -2,6 +2,20 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 
 def parse_output_xml(xml_file):
+    """
+    Parses the given XML file and extracts test information.
+
+    Args:
+        xml_file (str): The path to the XML file.
+
+    Returns:
+        list: A list of dictionaries containing test information. Each dictionary has the following keys:
+            - name (str): The name of the test.
+            - status (str): The status of the test.
+            - logs (str): The logs associated with the test.
+
+        Returns None if an error occurs during parsing.
+    """
     try:
         results = []
         tree = ET.parse(xml_file)
@@ -23,6 +37,17 @@ def parse_output_xml(xml_file):
         return None
 
 def generate_result_summary(results, start_time, end_time):
+    """
+    Generate a summary of the test results.
+
+    Args:
+        results (list): A list of test results.
+        start_time (datetime): The start time of the test execution.
+        end_time (datetime): The end time of the test execution.
+
+    Returns:
+        dict: A dictionary containing the summary of the test results.
+    """
     if results is None:
         return None
 
@@ -45,6 +70,15 @@ def generate_result_summary(results, start_time, end_time):
     return summary
 
 def handle_output(file_name):
+    """
+    Handles the output file by parsing it and generating a result summary.
+
+    Args:
+        file_name (str): The name of the output file to be parsed.
+
+    Returns:
+        str: The generated result summary if successful, None otherwise.
+    """
     start_time = datetime.now()
     results = parse_output_xml(file_name)
     end_time = datetime.now()

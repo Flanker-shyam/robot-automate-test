@@ -4,6 +4,16 @@ import os
 from .constants import FILE_PATH, OUTPUT_DIR
 
 def generate_robot_test_suite(test_data):
+    """
+    Generate a Robot Framework test suite based on the provided test data.
+
+    Args:
+        test_data (list): A list of dictionaries representing the test data. Each dictionary should have a "title" key
+                          for the test title and a "steps" key for the test steps.
+
+    Returns:
+        str: The generated Robot Framework test suite as a string.
+    """
     robot_test_suite = ""
     robot_test_suite += f"*** Settings ***\n"
     robot_test_suite += f"Library    SeleniumLibrary\n"
@@ -20,29 +30,17 @@ def generate_robot_test_suite(test_data):
             robot_test_suite += f"    {step}\n"
         
     return robot_test_suite
-
-
-# def execute_robot_tests(robot_test_suite):
-#     test_suite_file = "myapp/test_cases/myTestCase.robot"
-    
-#     try:
-#         with open(test_suite_file, "w") as file:
-#             file.write(robot_test_suite)
-        
-#         os.chmod(test_suite_file, 0o755)
-        
-#         time.sleep(5)
-
-#         print("executing test suite ....", test_suite_file)
-        
-#         command = ["robot", "--outputdir", "myapp/output", test_suite_file]
-        
-#         subprocess.run(command)
-#         print("Test suite execution completed.")
-#     except Exception as e:
-#         return str(e)
     
 def execute_robot_tests(robot_test_suite):
+    """
+    Executes the given Robot Framework test suite.
+
+    Args:
+        robot_test_suite (str): The Robot Framework test suite to be executed.
+
+    Returns:
+        str: The result of the test suite execution, or an error message if an exception occurs.
+    """
     test_suite_file = FILE_PATH
     
     try:
@@ -61,6 +59,16 @@ def execute_robot_tests(robot_test_suite):
         return str(e)
 
 def run_test(test_data):
+    """
+    Run the robot test suite using the provided test data.
+
+    Args:
+        test_data: The data used to generate the robot test suite.
+
+    Returns:
+        If an error occurs during test execution, the error message is returned.
+        Otherwise, None is returned.
+    """
     robot_test_suite = generate_robot_test_suite(test_data)
     
     error = execute_robot_tests(robot_test_suite)
