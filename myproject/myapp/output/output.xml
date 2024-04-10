@@ -1,75 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 7.0 (Python 3.9.6 on darwin)" generated="2024-04-06T19:58:42.327804" rpa="false" schemaversion="5">
+<robot generator="Rebot 7.0 (Python 3.9.6 on darwin)" generated="2024-04-10T04:08:36.318950" rpa="false" schemaversion="5">
 <suite id="s1" name="myTestCase" source="/Users/shyam.sunder/Documents/Projects/test_robot/myproject/myapp/test_cases/myTestCase.robot">
-<test id="s1-t1" name="Check forget password functionality for OrangeHRM website" line="7">
+<test id="s1-t1" name="Open google.com" line="7">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-06T19:57:03.314901" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<msg time="2024-04-10T04:08:04.955975" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
 <arg>http://www.google.com</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-06T19:57:03.314751" elapsed="3.596278"/>
+<status status="PASS" start="2024-04-10T04:08:04.955837" elapsed="3.745301"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-04-06T19:57:06.911715" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
-<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<msg time="2024-04-10T04:08:08.701932" level="INFO">Opening url 'https://shyam-sunder.onrender.com/'</msg>
+<arg>https://shyam-sunder.onrender.com/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-04-06T19:57:06.911464" elapsed="89.526581"/>
+<status status="PASS" start="2024-04-10T04:08:08.701684" elapsed="1.377077"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css:h5.oxd-text.oxd-text--h5.orangehrm-login-title</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-06T19:58:36.438227" elapsed="1.085852"/>
+<status status="PASS" start="2024-04-10T04:08:04.955265" elapsed="5.123691"/>
+</test>
+<test id="s1-t2" name="visit about me page" line="11">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:10.080102" level="INFO">Sending key(s) ('13',) to id=about-me element.</msg>
+<msg time="2024-04-10T04:08:10.381407" level="INFO">Sending keys 13</msg>
+<arg>id=about-me</arg>
+<arg>\13</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-04-10T04:08:10.079636" elapsed="0.384697"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-06T19:58:37.524552" level="INFO">Clicking element 'class=orangehrm-login-forgot-header'.</msg>
-<arg>class=orangehrm-login-forgot-header</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T19:58:37.524287" elapsed="2.488198"/>
+<status status="PASS" start="2024-04-10T04:08:10.079304" elapsed="0.385268"/>
+</test>
+<test id="s1-t3" name="Test valid login to Swag Labs" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:10.465402" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:10.465153" elapsed="3.303391"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>css:h6.oxd-text.oxd-text--h6.orangehrm-forgot-password-title</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-06T19:58:40.012709" elapsed="1.713825"/>
-</kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-04-06T19:58:41.734413" level="INFO">Current page contains text 'Reset Password'.</msg>
-<arg>Reset Password</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-04-06T19:58:41.726728" elapsed="0.007765"/>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:13.769167" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:13.768941" elapsed="0.525469"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-06T19:58:41.734859" level="INFO">Typing text 'Admin' into text field 'name=username'.</msg>
+<msg time="2024-04-10T04:08:14.294827" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:14.294590" elapsed="0.113546"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:14.408515" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:14.408311" elapsed="0.046867"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:14.455548" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:14.455362" elapsed="0.051345"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:14.524252" level="INFO">Current page contains text 'Products'.</msg>
+<arg>Products</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-10T04:08:14.507120" elapsed="0.017212"/>
+</kw>
+<status status="PASS" start="2024-04-10T04:08:10.464815" elapsed="4.059694"/>
+</test>
+<test id="s1-t4" name="Test invalid username login to Swag Labs" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:14.525258" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:14.525050" elapsed="2.507787"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:17.033374" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:17.033167" elapsed="0.475912"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:17.509484" level="INFO">Typing text 'invalidUser' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>invalidUser</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:17.509238" elapsed="0.127508"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:17.637143" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:17.636918" elapsed="0.046370"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:17.684053" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:17.683505" elapsed="0.043350"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:17.742104" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-10T04:08:17.727120" elapsed="0.015061"/>
+</kw>
+<status status="PASS" start="2024-04-10T04:08:14.524747" elapsed="3.217594"/>
+</test>
+<test id="s1-t5" name="check add button functionality" line="30">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:17.743167" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:17.742967" elapsed="4.379751"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:22.124290" level="INFO">Opening url 'https://the-internet.herokuapp.com/add_remove_elements/'</msg>
+<arg>https://the-internet.herokuapp.com/add_remove_elements/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:22.123741" elapsed="3.159428"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:25.283580" level="INFO">Clicking button 'Add Element'.</msg>
+<arg>Add Element</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-10T04:08:25.283342" elapsed="0.031197"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:25.321312" level="INFO">Current page contains text 'Delete'.</msg>
+<arg>Delete</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-04-10T04:08:25.314722" elapsed="0.006662"/>
+</kw>
+<status status="PASS" start="2024-04-10T04:08:17.742696" elapsed="7.578861"/>
+</test>
+<test id="s1-t6" name="Check forget password functionality for OrangeHRM website" line="36">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:25.322215" level="INFO">Opening browser 'chrome' to base url 'http://www.google.com'.</msg>
+<arg>http://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:25.322052" elapsed="4.494351"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:29.819188" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'</msg>
+<arg>https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-10T04:08:29.818816" elapsed="5.897665"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-10T04:08:35.716890" level="INFO">Clicking element 'class=orangehrm-login-forgot-header'.</msg>
+<msg time="2024-04-10T04:08:35.832612" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-10T04:08:35.832747" level="FAIL">Element with locator 'class=orangehrm-login-forgot-header' not found.</msg>
+<arg>class=orangehrm-login-forgot-header</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-04-10T04:08:35.716657" elapsed="0.123045">Element with locator 'class=orangehrm-login-forgot-header' not found.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Reset Password</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-04-10T04:08:35.839901" elapsed="0.000043"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
 <arg>name=username</arg>
 <arg>Admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-06T19:58:41.734648" elapsed="0.108305"/>
+<status status="NOT RUN" start="2024-04-10T04:08:35.840017" elapsed="0.000044"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-04-06T19:58:41.843386" level="INFO">Clicking button 'Reset Password'.</msg>
-<msg time="2024-04-06T19:58:41.974461" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-04-06T19:58:41.974590" level="FAIL">Button with locator 'Reset Password' not found.</msg>
 <arg>Reset Password</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="FAIL" start="2024-04-06T19:58:41.843147" elapsed="0.137409">Button with locator 'Reset Password' not found.</status>
+<status status="NOT RUN" start="2024-04-10T04:08:35.840126" elapsed="0.000024"/>
 </kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
 <arg>Reset Password link sent successfully</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="NOT RUN" start="2024-04-06T19:58:41.980734" elapsed="0.000043"/>
+<status status="NOT RUN" start="2024-04-10T04:08:35.840214" elapsed="0.000026"/>
 </kw>
-<status status="FAIL" start="2024-04-06T19:57:03.314084" elapsed="98.666812">Button with locator 'Reset Password' not found.</status>
+<status status="FAIL" start="2024-04-10T04:08:25.321770" elapsed="10.518575">Element with locator 'class=orangehrm-login-forgot-header' not found.</status>
 </test>
 <doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
-<status status="FAIL" start="2024-04-06T19:57:03.214000" elapsed="98.766634"/>
+<status status="FAIL" start="2024-04-10T04:08:04.862000" elapsed="30.978631"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="myTestCase">myTestCase</stat>
+<stat pass="5" fail="1" skip="0" id="s1" name="myTestCase">myTestCase</stat>
 </suite>
 </statistics>
 <errors>
